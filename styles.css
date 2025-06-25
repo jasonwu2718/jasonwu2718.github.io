@@ -1,3 +1,13 @@
+
+/* Fonts */
+
+body { font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #131313;
+  margin: 0rem 20rem 0rem 20rem;
+  padding: 0rem;
+}
 /* Text Alignment */
 .text-left {
   text-align: left;
@@ -25,8 +35,10 @@
 
 .image-left {
   float: left;
+  display: block;
   margin-right: 1rem;
   margin-bottom: 1rem;
+  width: 20%;
 }
 
 .image-right {
@@ -359,4 +371,90 @@
   background-color: #0056b3;
   color: white;
   text-decoration: none;
+}
+
+/* Horizontal Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  background-color: #c9bbbb;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: normal;
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.navbar-menu li {
+  display: inline-block; /* redundant but ensures inline-block behavior */
+  font-size: 1.2rem;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  color: #0f6cd1;
+}
+
+figure {
+  /* border: 2px solid red; */
+  float: left; /* Allows figure to float left */
+  display: min-content;  /* Keeps figure compact around content */
+  margin: 1rem 1rem 1rem 1rem;              /* Remove default margins */
+}
+
+figure img {
+  /* border: 2px solid blue; */
+  width: 15vw;
+  display: block;         /* Makes image a block element */
+  margin-bottom: 0.5rem;  /* Small space above caption */
+}
+
+figcaption {
+  text-align: center;    /* Center caption text */
+  margin-top: 0.5rem;     /* Space between image and caption */
+} 
+
+
+/* New class for content lists with arrows */
+.content-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.content-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.content-list li::before {
+  content: "➤ ";
+  position: absolute;
+  left: 0;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.clear-float {
+  clear: both; /* Ensures that the element clears any floated elements */
 }
