@@ -504,3 +504,22 @@ figcaption {
 .card-content {
   padding: 0.25rem;
 }
+
+/* Light blue variant for research projects */
+.card.research {
+  background-color: #e6f3ff;      /* Light blue background */
+  border-color: #007bff;          /* Blue border to match */
+}
+
+.card.research .card-header {
+  background-color: #5a9ee7;      /* Darker blue header */
+  color: white;
+}
+
+.card.research .card-title {
+  color: white;                   /* Ensure title is visible */
+}
+
+.card.research .card-date {
+  color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+}
