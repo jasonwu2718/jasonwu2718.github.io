@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 
 /* Fonts */
 
@@ -5,9 +8,40 @@ body { font-family: 'Times New Roman', Times, serif;
   font-size: 16px;
   line-height: 1.2;
   color: #131313;
-  margin: 0rem 20rem 0rem 20rem;
+  margin: 0rem 320px 0rem 320px;
   padding: 0rem;
+  max-width: 1200px;
+  /* border: 10px solid red; */
+  /* text-align: left; */
+  /* overflow-x: hidden; */
 }
+
+/* When window gets smaller, reduce margins */
+@media (max-width: 1400px) {
+  body {
+    margin: 0 100px 0 100px;        /* Smaller margins */
+  }
+}
+
+@media (max-width: 1200px) {
+  body {
+    margin: 0 50px 0 50px;         /* Even smaller margins */
+  }
+}
+
+@media (max-width: 1000px) {
+  body {
+    margin: 0 20px 0 20px;         /* Minimal margins */
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    margin: 0 10px 0 10px;         /* Very small margins */
+  }
+}
+
+
 /* Text Alignment */
 .text-left {
   text-align: left;
@@ -374,46 +408,50 @@ body { font-family: 'Times New Roman', Times, serif;
 }
 
 /* Horizontal Navigation Bar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1rem;
-  background-color: #c9bbbb;
-  width: 100%;
-  box-sizing: border-box;
-}
+/* @media (max-width: 768px) { */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    background-color: #c9bbbb;
+    width: 100%;
+    box-sizing: border-box;
+  }
 
-.navbar-logo {
-  font-size: 2rem;
-  font-weight: normal;
-  text-decoration: none;
-  color: #333;
-}
+  .navbar-logo {
+    font-size: 2rem;
+    font-weight: normal;
+    text-decoration: none;
+    color: #333;
+  }
 
-.navbar-menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 2.5rem;
-}
+  .navbar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2.5rem;
+  }
 
-.navbar-menu li {
-  display: inline-block; /* redundant but ensures inline-block behavior */
-  font-size: 1.2rem;
-}
+  .navbar-menu li {
+    display: inline-block;
+    /* redundant but ensures inline-block behavior */
+    font-size: 1.2rem;
+  }
 
-.navbar-menu a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
+  .navbar-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
 
-.navbar-menu a:hover {
-  color: #0f6cd1;
-}
+  .navbar-menu a:hover {
+    color: #0f6cd1;
+  }
+/* } */
+
 
 figure {
   /* border: 2px solid red; */
